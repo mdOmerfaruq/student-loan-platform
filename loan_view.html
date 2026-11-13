@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Offers - Student Loan Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0059b3;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #004080;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: white;
+    }
+
+    nav ul li a:hover {
+      background-color: #003366;
+      border-radius: 4px;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .loan-request {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      background-color: #ffffff;
+    }
+
+    .offer-form {
+      display: none;
+      margin-top: 10px;
+      background-color: #eef2f3;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .loan-request button {
+      margin-top: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .loan-request button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Loan Platform</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="loan-request.html">Loan Request</a></li>
+      <li><a href="loan-offers.html">Loan Offers</a></li>
+      <li><a href="crowdfunding.html">Crowdfunding</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Available Loan Requests</h2>
+
+    <!-- Request 1 -->
+    <div class="loan-request">
+      <p><strong>John</strong> needs <strong>$2000</strong> for tuition.</p>
+      <button onclick="toggleForm('form1')">Give Offer</button>
+      <div id="form1" class="offer-form">
+        <form action="submit_offer.php" method="POST">
+          <input type="hidden" name="request_id" value="1" />
+          <label>Lender Name: <input type="text" name="lender_name" required></label><br/>
+          <label>Offer Amount: <input type="number" name="offer_amount" required></label><br/>
+          <label>Interest Rate (%): <input type="number" step="0.01" name="interest_rate" required></label><br/>
+          <button type="submit">Submit Offer</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Request 2 -->
+    <div class="loan-request">
+      <p><strong>Sara</strong> needs <strong>$1500</strong> for books and supplies.</p>
+      <button onclick="toggleForm('form2')">Give Offer</button>
+      <div id="form2" class="offer-form">
+        <form action="submit_offer.php" method="POST">
+          <input type="hidden" name="request_id" value="2" />
+          <label>Lender Name: <input type="text" name="lender_name" required></label><br/>
+          <label>Offer Amount: <input type="number" name="offer_amount" required></label><br/>
+          <label>Interest Rate (%): <input type="number" step="0.01" name="interest_rate" required></label><br/>
+          <button type="submit">Submit Offer</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Request 3 -->
+    <div class="loan-request">
+      <p><strong>Ahmed</strong> needs <strong>$1800</strong> for exam fees.</p>
+      <button onclick="toggleForm('form3')">Give Offer</button>
+      <div id="form3" class="offer-form">
+        <form action="submit_offer.php" method="POST">
+          <input type="hidden" name="request_id" value="3" />
+          <label>Lender Name: <input type="text" name="lender_name" required></label><br/>
+          <label>Offer Amount: <input type="number" name="offer_amount" required></label><br/>
+          <label>Interest Rate (%): <input type="number" step="0.01" name="interest_rate" required></label><br/>
+          <button type="submit">Submit Offer</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleForm(id) {
+      const form = document.getElementById(id);
+      form.style.display = form.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

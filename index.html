@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Student Loan & Crowdfunding</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #005fa3;
+    }
+
+    nav ul li {
+      margin: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      background-color: #0077cc;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #005fa3;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .loan-request {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 600px;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .loan-offers ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .loan-offers li {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accept-offer {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .accept-offer:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #eee;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Student Loan & Crowdfunding Platform</h1>
+    <nav>
+      <ul>
+        <li><a href="loan_view.html" id="loan_view">View Loans</a></li>
+        <li><a href="loan-request.html" id="loanRequest">Loan Request</a></li>
+        <li><a href="loan-offers.html" id="loanOffers">Loan Offers</a></li>
+        <li><a href="crowdfunding.html" id="crowdfunding">Crowdfunding</a></li>
+        <li><a href="login.html" id="login">Login</a></li>
+        <li><a href="signup.html" id="signup">Sign Up</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to the Loan & Crowdfunding Platform</h2>
+      <p>Apply for a loan or support a cause by donating to a campaign.</p>
+    </section>
+
+ 
+
+
+      <!-- You can add more loan requests here if needed -->
+
+    </section>
+
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <p>Email: studentloanplatform@gmail.com</p>
+      <p>Phone: +8801799313045</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Loan & Crowdfunding System</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
